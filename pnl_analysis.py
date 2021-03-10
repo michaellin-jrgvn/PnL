@@ -8,13 +8,13 @@ from statsmodels.tsa.seasonal import seasonal_decompose
 
 @st.cache(allow_output_mutation=True)
 def read_data(file):
-    df = pd.read_excel('./Data/P&L/' + file, sheet_name='P&L data',engine='pyxlsb',usecols=['Lookup Code','Description','Accounting Period','Details','Base Amount','T3-Cost Center Analysis Code','Name'])
+    df = pd.read_excel('./' + file, sheet_name='P&L data',engine='pyxlsb',usecols=['Lookup Code','Description','Accounting Period','Details','Base Amount','T3-Cost Center Analysis Code','Name'])
     df['Base Amount'] = df['Base Amount'] * -1
     return df
 
 @st.cache(allow_output_mutation=True)
 def read_2021_data(file):
-    df = pd.read_excel('./Data/P&L/' + file,usecols=['Lookup Code','Description','Accounting Period','Details','Base Amount','T3-Cost Center Analysis Code','Name'])
+    df = pd.read_excel('./' + file,usecols=['Lookup Code','Description','Accounting Period','Details','Base Amount','T3-Cost Center Analysis Code','Name'])
     df['Base Amount'] = df['Base Amount'] * -1
     return df
 
