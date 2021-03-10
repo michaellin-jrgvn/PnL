@@ -6,6 +6,8 @@ import statsmodels.api as sm
 import plotly.express as px
 from statsmodels.tsa.seasonal import seasonal_decompose
 
+st.set_page_config(layout="wide")
+
 @st.cache(allow_output_mutation=True)
 def read_data(file):
     df = pd.read_excel('./' + file, sheet_name='P&L data',engine='pyxlsb',usecols=['Lookup Code','Description','Accounting Period','Details','Base Amount','T3-Cost Center Analysis Code','Name'])
