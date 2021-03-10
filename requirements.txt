@@ -5,3 +5,4 @@ statsmodels==0.12.2
 streamlit==0.77.0
 pyxlsb
 xlrd
+openpyxl
