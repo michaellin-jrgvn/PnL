@@ -38,6 +38,7 @@ def append_all_data():
     df = df_2020.append(df_2019)
     df = df.append(df_2021_1)
     df = df.append(df_2021_2)
+    df = df.append(df_2021_3)
     return df
 
 df = append_all_data()
