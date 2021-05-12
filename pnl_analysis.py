@@ -35,10 +35,12 @@ def append_all_data():
     df_2021_1 = read_2021_data('GL Jan sent OPS.xlsx')
     df_2021_2 = read_2021_data('GL Feb sent OPS.xlsx')
     df_2021_3 = read_2021_data('GL Mar sent OPS.xlsx')
+    df_2021_4 = read_2021_data('GL Apr sent OPS.xlsx')
     df = df_2020.append(df_2019)
     df = df.append(df_2021_1)
     df = df.append(df_2021_2)
     df = df.append(df_2021_3)
+    df = df.append(df_2021_4)
     return df
 
 df = append_all_data()
